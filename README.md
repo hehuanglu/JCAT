@@ -115,7 +115,7 @@ Alternatively, launch the application by running the main class annotated with `
 ⚠️ Ensure that all listed services are started successfully and are properly registered and connected before proceeding to the next step.
 
 
-## Step 6: Execute the Tool Using the Experimental Datasets
+## Step 5: Execute the Tool Using the Experimental Datasets
 
 The repository already includes several experimental Java projects under the
 `experienceData` directory:

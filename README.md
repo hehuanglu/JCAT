@@ -45,29 +45,34 @@ Navigate to the project root directory:
 ## Step 2: Install and Configure Required Dependencies
 
 ### CIA Tool
-Replace the `mrmathami` folder in `Users/admin/.m2/repository` with the version
-downloaded from https://drive.google.com/drive/u/0/folders/1c_FdlggwXR_xfr1hdL4L-zvnwr5ND5hA[link].
+
+The project depends on customised CIA libraries that are not available from public Maven repositories.
+
+Download the `mrmathami` folder from:
+
+https://drive.google.com/drive/u/0/folders/1c_FdlggwXR_xfr1hdL4L-zvnwr5ND5hA
+
+Then replace the existing `mrmathami` directory in your local Maven repository:
+
+- **Windows:** `C:\Users\<your-username>\.m2\repository`
+- **macOS/Linux:** `~/.m2/repository`
+
+After replacement, Maven will be able to resolve the required CIA dependencies during the build process.
 
 ### Java Development Kit (JDK)
 
-Install a supported JDK version and verify the installation:
-
-    java -version
+Install a supported JDK version and verify the installation.
 
 ### Apache Maven
 
-Install Apache Maven and verify the installation:
-
-    mvn -version
+Install Apache Maven and verify the installation.
 
 
 ### Z3 SMT Solver (Java Bindings)
 
 1. Install the Z3 SMT Solver with Java bindings.
-2. Ensure that the Z3 native library is accessible at runtime
-3. Verify the installation:
-
-    z3 --version
+2. Ensure that the Z3 native library is accessible at runtime.
+3. Verify the installation.
 
 
 ### Postman

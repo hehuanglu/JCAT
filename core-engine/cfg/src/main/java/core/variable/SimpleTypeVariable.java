@@ -1,0 +1,35 @@
+package core.variable;
+
+import com.microsoft.z3.*;
+import core.symbolicExecution.SymbolicExecutionRewrite;
+import org.eclipse.jdt.core.dom.SimpleType;
+
+public class SimpleTypeVariable extends Variable {
+    private SimpleType simpleType;
+
+    public SimpleTypeVariable(SimpleType simpleType, String name) {
+        this.simpleType = simpleType;
+        super.setName(name);
+    }
+
+    public SimpleType getType() {
+        return simpleType;
+    }
+
+    public String getTypeName() {
+        return simpleType.getName().getFullyQualifiedName();
+    }
+
+    public static Expr createZ3SimpleTypeVariable(SimpleTypeVariable simpleTypeVariable, Context ctx) {
+        String name = simpleTypeVariable.getName();
+        String typeName = simpleTypeVariable.getTypeName();
+
+        SymbolicExecutionRewrite.variableTypeMap.put(name, typeName.toString());
+        switch (typeName) {
+            case "String":
+                return (SeqExpr<CharSort>) ctx.mkConst(name, ctx.mkStringSort());
+            default:
+                throw new IllegalArgumentException("Unsupported type: " + typeName);
+        }
+    }
+}

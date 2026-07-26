@@ -1,0 +1,17 @@
+int n1=s1.length(), n2=s2.length();
+===false===false===1---end---n1 == 0===false===true===2---end---n2 == 0===false===true===2---end---int nn=1, mm=1;
+===false===false===6---end---s1.charAt(0) == '-'===false===true===7---end---s2.charAt(0) == '-'===true===false===9---end---mm=-1;
+===false===false===10---end---int isNeg=nn * mm;
+===false===false===12---end---int[] result=new int[n1 + n2];
+===false===false===16---end---int i1=0;
+===false===false===19---end---int i2=0;
+===false===false===22---end---int i=n1 - 1===false===false===25---end---i >= 0===true===false===25---end---s1.charAt(i) == '-'===false===true===26---end---int carry=0;
+===false===false===28---end---int n1Digit=s1.charAt(i) - '0';
+===false===false===29---end---i2=0;
+===false===false===30---end---int j=n2 - 1===false===false===33---end---j >= 0===true===false===33---end---s2.charAt(j) == '-'===true===false===34---end---continue;
+===false===false===35---end---j--===false===false===33---end---j >= 0===false===true===33---end---carry > 0===false===true===52---end---i1++;
+===false===false===55---end---i--===false===false===25---end---i >= 0===false===true===25---end---int i=result.length - 1;
+===false===false===59---end---i >= 0===true===false===60---end---result[i] == 0===true===false===60---end---i--;
+===false===false===61---end---i >= 0===true===false===60---end---result[i] == 0===true===false===60---end---i--;
+===false===false===61---end---i >= 0===false===true===60---end---i == -1===true===false===65---end---return "0";
+===false===false===66---end---2.77575===0

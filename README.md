@@ -1,5 +1,5 @@
 
-# LICO Tool Installation Guide
+# JCAT Tool Installation Guide
 
 An concolic-testing tool for Java projects.
 
